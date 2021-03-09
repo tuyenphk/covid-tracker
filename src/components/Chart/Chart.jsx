@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Chart = () => {
+const Chart = () => {
     return (
         <div>
             Chart
         </div>
     )
 }
+
+export default Chart;

@@ -7,3 +7,5 @@ export const CountryPicker = () => {
         </div>
     )
 }
+
+export default CountryPicker;
