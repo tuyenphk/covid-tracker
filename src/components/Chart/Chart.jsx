@@ -18,7 +18,7 @@ const Chart = () => {
         dailyData.length  
             ? (
             <Line data={{
-                labels: dailyData.map(({data})=>data),
+                labels: dailyData.map(({date})=>date),
                 datasets: [
                 {
                     data: dailyData.map(({confirmed})=>confirmed),
@@ -30,7 +30,7 @@ const Chart = () => {
                     data: dailyData.map(({deaths})=>deaths),
                     label: 'Deaths',
                     borderColor: 'red',
-                    backgroundColor: 'rgba(8, 240, 20, 0.5)',
+                    backgroundColor: 'rgba(255,0,0,0.5)',
                     fill: 'true'
                 }]
             }}/> ) : null
