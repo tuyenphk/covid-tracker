@@ -14,7 +14,7 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
         fetchAPI();
     });
 
-    const barChar = (
+    const barChart = (
         confirmed ? (
             <Bar
                 data={{
@@ -23,7 +23,7 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
                         label: 'People',
                         backgroundColor: ['rgba(0,0,255, 0.5)', 'rgba(8, 240, 20, 0.5)', 'rgba(255,0,0,0.5)']
                     }],
-                    data: [confirmed, recovered, deaths]
+                    data: [confirmed.value, recovered.value, deaths.value]
                 }}
                 options={{
                     legend : {display: false},
@@ -56,7 +56,7 @@ const Chart = ({data: {confirmed, recovered, deaths}, country}) => {
 
     return (
         <div className={styles.container}>
-            {lineChart}
+            {country ? barChart : lineChart}
         </div>
     )
 }
